@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "nucgenda",
+  "version": "1.0.0",
+  "description": "Nucgenda es una CLI creado por nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdmadeira/nucgenda.git"
+  },
+  "author": "Rodrigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdmadeira/nucgenda/issues"
+  },
+  "homepage": "https://github.com/rdmadeira/nucgenda#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^9.1.5"
+  }
+}
