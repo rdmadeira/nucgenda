@@ -1,10 +1,12 @@
+#!/c/Program Files/nodejs/node node
+// El operador #! sirve para tornar el archivo ejecutable como node, porque si no va a tratar de correrlo como archivo Bash o un Shell. El comando which node nos da la ubicacion del binario de node.
 import { Command } from 'commander';
 import inquirer from 'inquirer';
 import figlet from 'figlet';
 import chalk from 'chalk';
 
-import { contactsPrompts } from './prompts';
-import { saveContacts, getContacts } from './utils';
+import { contactsPrompts } from './prompts.js';
+import { saveContacts, getContacts } from './utils.js';
 
 const program = new Command();
 const { prompt } = inquirer;
@@ -22,7 +24,7 @@ program
     prompt(contactsPrompts).then(({ firstName, lastName, phoneNumber }) => {
       const key = firstName + ' ' + lastName;
       let contacts = getContacts();
-      contact[key] = { firstName, lastName, phoneNumber };
+      contacts[key] = { firstName, lastName, phoneNumber };
       saveContacts(contacts);
       console.log(chalk.bgGreen('Usuario creado correctamente!!'));
     });
@@ -41,17 +43,21 @@ program
         message: 'Seleccionar contacto:',
         choices: Object.keys(contacts),
       },
-    ]).then(({ selected }) => {
-      // selected es el name del prompt del objeto que se selecionó!!
-      const contact = contacts[selected];
-      console.log(`
+    ])
+      .then(({ selected }) => {
+        // selected es el name del prompt del objeto que se selecionó!!
+        const contact = contacts[selected];
+        console.log(`
         Info del Contacto:
 
             Nombre: ${contact.firstName}
             Apellido: ${contact.lastName}
             Tel/Cel: ${contact.phoneNumber}
       `);
-    });
+      })
+      .catch((error) =>
+        console.log(error.code, 'error - selecione un contacto')
+      );
   });
 
 program.parse(process.argv); // necesita este parse para correr el programa.

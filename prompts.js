@@ -1,7 +1,7 @@
 const contactsPrompts = [
-    {name: "firstName", message: "Nombre"},
-    {name: "lastName", message: "Apellido"},
-    {name: "phone", message: "Tel/Cel"},
-]
+  { name: 'firstName', message: 'Nombre' },
+  { name: 'lastName', message: 'Apellido' },
+  { name: 'phoneNumber', message: 'Tel/Cel' },
+];
 
-export {contactsPrompts};
+export { contactsPrompts };
