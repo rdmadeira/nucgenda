@@ -13,7 +13,6 @@
   "plugins": ["react", "import", "jsx-a11y"],
   "rules": {
     "react/prop-types": 0,
-    "no-console": 1, // Salta warnings para los console.log no iren a producción
     "prettier/prettier": [
       "error",
       {

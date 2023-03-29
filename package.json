@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Nucgenda es una CLI creado por nodejs",
   "main": "index.js",
+  "bin": {
+    "nucgenda": "index.js"
+  },
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
   },

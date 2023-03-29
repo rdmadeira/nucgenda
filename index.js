@@ -1,4 +1,4 @@
-#!/c/Program Files/nodejs/node node
+#!/usr/bin/env node
 // El operador #! sirve para tornar el archivo ejecutable como node, porque si no va a tratar de correrlo como archivo Bash o un Shell. El comando which node nos da la ubicacion del binario de node.
 import { Command } from 'commander';
 import inquirer from 'inquirer';
