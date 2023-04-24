@@ -13,7 +13,6 @@ const saveContacts = (contacts) => {
 
 const getContacts = () => {
   try {
-    console.log('object');
     return JSON.parse(fs.readFileSync(contactsLocation));
   } catch (error) {
     if (error.code === 'ENOENT') {
